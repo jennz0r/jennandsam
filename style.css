@@ -1,0 +1,309 @@
+::-moz-selection {
+  background-color: #a1faf7;
+}
+
+::selection {
+  background-color: #a1faf7;
+}
+
+body {
+  margin: 0 auto;
+  padding: 1em;
+  background-image: url(img/geometry.png);
+  font-family: "bellota", helvetica, arial, sans-serif;
+  font-size: 1.5em;
+}
+
+h1, h2 {
+  font-family: "megrim", helvetica, arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.25em;
+  background-color: #99FFFF;
+  font-size: 2em;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 0;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.wedding-img,
+.wedding-img-square {
+  width: 400px;
+}
+
+.first-photo-img {
+  width: 100%;
+}
+
+.wedding-img-square {
+  display: block;
+  height: 400px;
+  padding: 0 0.5em 0.5em 0.5em;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  z-index: 1;
+}
+
+.wedding-img {
+  display: none;
+}
+
+.sparkle-img {
+  position: absolute;
+  top: -60px;
+  left: -180px;
+  clip-path: ellipse(25% 40% at 50% 50%);
+  z-index: -1;
+}
+
+.circle-decoration {
+  width: 300px;
+  height: 300px;
+  background-color: pink;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.circle-decoration--small {
+  width: 150px;
+  height: 150px;
+  background-color: #99FFFF;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.what {
+  position: relative;
+}
+
+.what,
+.testimonials {
+  grid-template-columns: 100%;
+}
+
+.circle-decoration--what {
+  position: absolute;
+  top: 45px;
+  left: 130px;
+  z-index: -1;
+}
+
+.circle-decoration--how {
+  position: absolute;
+  top: -280px;
+  left: -75px;
+  z-index: -1;
+  background-color: #ffff99;
+}
+
+.how-title {
+  background-color: #FF7FFF;
+}
+
+.how-images,
+.testimonials {
+  position: relative;
+}
+
+.jennmetsam,
+.sammetjenn {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.why-title {
+  background-color: #ffff99;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+#paypal-button-container {
+  max-width: 400px;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  float: left;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #FF7FFF;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 800px) {
+  body {
+    max-width: 800px;
+  }
+
+  h1 {
+    margin: 1em 0 0.5em;
+    padding: 0.5em;
+    font-size: 3em;
+  }
+
+  h2 {
+    margin: 0.75em 0;
+    padding: 0.5em;
+    font-size: 2.25em;
+  }
+
+  .sparkle-img {
+    top: 10px;
+    left: -180px;
+  }
+
+  .circle-decoration--what {
+    top: 175px;
+    left: 280px;
+  }
+
+  .circle-decoration--how {
+    position: absolute;
+    top: -135px;
+    left: -75px;
+    z-index: -1;
+    background-color: #ffff99;
+  }
+
+  .what,
+.testimonials {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .circle-decoration--large.circle-decoration--jenn, .circle-decoration--large.circle-decoration--sam, .circle-decoration--large.circle-decoration--samsam {
+    z-index: -2;
+  }
+  .circle-decoration--large.circle-decoration--jenn {
+    top: 100px;
+    left: 80px;
+  }
+
+  .circle-decoration--jenn {
+    position: absolute;
+    top: 400px;
+    left: 50px;
+    z-index: -1;
+  }
+
+  .circle-decoration--sam {
+    position: absolute;
+    top: 20px;
+    left: 500px;
+    z-index: -1;
+  }
+
+  .heart--jenn {
+    position: absolute;
+    top: 380px;
+    left: 350px;
+    z-index: -1;
+  }
+
+  .heart--sam {
+    position: absolute;
+    top: 380px;
+    left: 350px;
+    z-index: -1;
+  }
+
+  .jennmetsam {
+    padding-right: 1em;
+  }
+
+  .sammetjenn {
+    padding-left: 1em;
+  }
+
+  .gifts {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .gift {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    max-width: 1000px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .wedding-img-square {
+    display: none;
+  }
+
+  .wedding-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    padding: 0 0.5em 0.5em 0.5em;
+  }
+
+  .circle-decoration--what {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

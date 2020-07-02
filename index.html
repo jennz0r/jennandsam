@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Jenn and Sam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Roboto&family=Bellota:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <nav>
+
+      </nav>
+    </header>
+    <div class="content">
+      <section class="what">
+        <img src="img/pink-sparkle.gif" alt="" class="sparkle-img">
+        <h1>We got married!</h1>
+        <img src="img/wedding.jpg" alt="" class="wedding-img">
+        <img src="img/wedding-square.jpg" alt="" class="wedding-img-square">
+        <div class="circle-decoration circle-decoration--what"></div>
+      </section>
+      <section class="how">
+        <h2 class="how-title">How We Met</h2>
+        <p>Here is our first photo together which was at a wedding (fittingly?):</p>
+        <div class="how-images">
+          <img src="img/first-photo.jpg" alt="" class="first-photo-img">
+          <div class="circle-decoration circle-decoration--how"></div>
+        </div>
+        <p>
+          We'd only been dating for 25 days when Jenn asked Sam to be her date at Angie and Alex's wedding. Hey, isn't that the same suit?
+        </p>
+        <div class="testimonials">
+          <div class="circle-decoration circle-decoration--small circle-decoration--jenn"></div>
+          <div class="circle-decoration circle-decoration--large circle-decoration--jenn"></div>
+          <div class="jennmetsam">
+            <h3>Jenn met Sam</h3>
+            <p>
+              For our first date, we had dessert on a Monday night at 6pm at Sixth Course. Yes, Monday at 6pm.
+              After, we went to Bond Bar where Sam had a drink and some of my drink because I couldn't finish it -
+              I was driving home, so I wanted to be safe! I found out later Sam isn't actually a big drinker at all! Oops.
+              I knew we were meant to be together when I asked how he'd get home. Sam said that he'd take the bus
+              or catch a taxi because he didn't use ride sharing services like Lyft and Uber. It was clearly a
+              match made in heaven from the start.
+            </p>
+          </div>
+          <div class="circle-decoration circle-decoration--small circle-decoration--sam"></div>
+          <div class="circle-decoration circle-decoration--large circle-decoration--sam"></div>
+          <div class="heart heart--jenn"></div>
+          <div class="heart heart--sam"></div>
+          <div class="sammetjenn">
+            <h3>Sam met Jenn</h3>
+            <p>
+              After just a day of texting, we realized that if we were going to meet up in the next few weeks,
+              it had to be the very next day due to scheduling conflicts. It took a while before we could find and choose a dessert 
+              place that was open on Mondays, but Jenn finally found Sixth Course. We shared some delicious treats 
+              and talked about national parks, photography, and tech. It started to feel awkward sitting in the 
+              tiny, quiet shop as people occasionally came in to buy desserts, so I suggested heading over to Bond Bar
+              a couple blocks away in an attempt to show off my knowledge of the area. We knew we were onto a good thing
+              when we high fived over our shared dislike of Uber and Lyft, and the rest is history.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="why">
+        <h2 class="why-title">Gifts?</h2>
+        <p>We don't need no stinkin' gifts.</p>
+        <p>People have been asking us stuff. We don't really need anything. But we made this website. And we love food.</p>
+        <div id="paypal-button-container"></div>
+        <p>Here are some things we might purchase with your gifts:</p>
+        <div class="gifts">
+          <img src="img/ac.png" alt="" class="gift">
+          <img src="img/pan.png" alt="" class="gift">
+          <img src="img/pots.png" alt="" class="gift">
+        </div>
+        <h3>Charity</h3>
+        <p>Alternatively, we'd love for y'all to donate to charities in our name:</p>
+        <a href="https://lwvsf.org/donate" target="_blank" rel="nolooper"><img src="img/LWVSF.png" alt="" class="gift"></a>
+        <a href="https://coalition.networkforgood.com/" target="_blank" rel="nolooper"><img src="img/coh.png" alt="" class="gift"></a>
+        <a href="https://coalition.networkforgood.com/" target="_blank" rel="nolooper"><img src="img/coh.png" alt="" class="gift"></a>
+      </section>
+      <footer>
+        <p>© Jenn and Sam 2020</p>
+      </footer>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=AU-3G9ffxMM-2codGhMehmnO_DVFZlrG9e7gOfpV9bjRxro4fkTTM6QeIYrITFqzZojnZPTMMFU9ffkP&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'black',
+          layout: 'vertical',
+          label: 'paypal',
+        },
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '8.88'
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
+  </body>
+</html>
