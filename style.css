@@ -123,8 +123,20 @@ p {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.why {
+  position: relative;
+}
+
 .why-title {
   background-color: #ffff99;
+}
+
+.circle-decoration--why {
+  position: absolute;
+  top: -40px;
+  left: -75px;
+  background-color: #FF7FFF;
+  z-index: -1;
 }
 
 .content {
@@ -183,6 +195,13 @@ p {
   body {
     max-width: 600px;
   }
+
+  .testimonials .circle-decoration--large.circle-decoration--sam {
+    position: absolute;
+    top: 300px;
+    left: 500px;
+    z-index: -1;
+  }
 }
 @media screen and (min-width: 800px) {
   body {
@@ -224,11 +243,14 @@ p {
     display: grid;
     grid-template-columns: 50% 50%;
   }
-
-  .circle-decoration--large.circle-decoration--jenn, .circle-decoration--large.circle-decoration--sam, .circle-decoration--large.circle-decoration--samsam {
+  .what .circle-decoration--large.circle-decoration--jenn, .what .circle-decoration--large.circle-decoration--sam, .what .circle-decoration--large.circle-decoration--samsam,
+.testimonials .circle-decoration--large.circle-decoration--jenn,
+.testimonials .circle-decoration--large.circle-decoration--sam,
+.testimonials .circle-decoration--large.circle-decoration--samsam {
     z-index: -2;
   }
-  .circle-decoration--large.circle-decoration--jenn {
+  .what .circle-decoration--large.circle-decoration--jenn,
+.testimonials .circle-decoration--large.circle-decoration--jenn {
     top: 100px;
     left: 80px;
   }
@@ -242,22 +264,22 @@ p {
 
   .circle-decoration--sam {
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 500px;
     z-index: -1;
   }
 
   .heart--jenn {
     position: absolute;
-    top: 380px;
-    left: 350px;
+    top: 340px;
+    left: 260px;
     z-index: -1;
   }
 
   .heart--sam {
     position: absolute;
-    top: 380px;
-    left: 350px;
+    top: 125px;
+    left: 500px;
     z-index: -1;
   }
 
@@ -303,6 +325,10 @@ p {
     position: relative;
     top: 0;
     left: 0;
+  }
+
+  .circle-decoration--large.circle-decoration--sam {
+    left: 700px;
   }
 }
 
