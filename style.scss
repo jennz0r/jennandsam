@@ -14,7 +14,7 @@ body {
   font-size: 1.5em;
 }
 
-h1, h2 {
+h1, h2, h4 {
   font-family: "megrim", helvetica, arial, sans-serif;
 }
 
@@ -94,6 +94,10 @@ p {
   grid-template-columns: 100%;
 }
 
+.testimonials {
+  padding-bottom: 1em;
+}
+
 .circle-decoration--what {
   position: absolute;
   top: 45px;
@@ -123,6 +127,54 @@ p {
   background-color: rgba(255,255,255,0.3);
 }
 
+.testimonials {
+  .circle-decoration--large {
+    &.circle-decoration--jenn {
+      position: absolute;
+      top: 150px;
+      left: 40px;
+      z-index: -1;
+    }
+  }
+
+  .circle-decoration--large {
+    &.circle-decoration--sam {
+      position: absolute;
+      top: 800px;
+      left: 50px;
+      z-index: -1;
+    }
+  }
+}
+
+.circle-decoration--jenn {
+  position: absolute;
+  top: 400px;
+  left: 20px;
+  z-index: -1;
+}
+
+.circle-decoration--sam {
+  position: absolute;
+  top: 1200px;
+  left: 50px;
+  z-index: -1;
+}
+
+.heart--jenn {
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  z-index: -1;
+}
+
+.heart--sam {
+  position: absolute;
+  top: 800px;
+  left: 50px;
+  z-index: -1;
+}
+
 .why {
   position: relative;
 }
@@ -139,19 +191,28 @@ p {
   z-index: -1;
 }
 
+.circle-decoration--charity {
+  position: absolute;
+  top: 800px;
+  left: 230px;
+  background-color: #99FFFF;
+  z-index: -1;
+}
+
 .content {
   margin: 0 auto;
 }
 
-#paypal-button-container {
-  max-width: 400px;
+.gift-button {
+  height: 100px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: pink;
 }
 
 .heart {
-  position: relative;
   width: 100px;
   height: 90px;
-  float: left;
 }
 
 .heart:before,
@@ -191,6 +252,38 @@ p {
           transform-origin :100% 100%;
 }
 
+.gifts,
+.charities {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0.5em 0 1em;
+}
+
+.gift,
+.charity {
+  justify-self: center;
+  align-self: center;
+}
+
+.gift,
+.charity img {
+  max-width: 160px;
+}
+
+.circle-decoration--charity.circle-decoration--small {
+  top: 1800px;
+  left: -50px;
+  background-color: pink;
+}
+
+@media screen and (max-width: 400px) {
+  .circle-decoration--charity.circle-decoration--small {
+    top: 1900px;
+    left: -50px;
+    background-color: pink;
+  }
+}
+
 @media screen and (min-width: 600px) {
   body {
     max-width: 600px;
@@ -198,13 +291,43 @@ p {
 
   .testimonials {
     .circle-decoration--large {
-      &.circle-decoration--sam {
-        position: absolute;
-        top: 300px;
-        left: 500px;
-        z-index: -1;
+      &.circle-decoration--jenn {
+        top: 100px;
+        left: 40px;
       }
     }
+  
+    .circle-decoration--large {
+      &.circle-decoration--sam {
+        top: 600px;
+        left: 300px;
+      }
+    }
+  }
+  
+  .circle-decoration--jenn {
+    top: 300px;
+    left: 500px;
+  }
+  
+  .circle-decoration--sam {
+    top: 800px;
+    left: 50px;
+  }
+  
+  .heart--jenn {
+    top: 0px;
+    left: 60px;
+  }
+  
+  .heart--sam {
+    top: 700px;
+    left: 50px;
+  }
+
+  .circle-decoration--charity.circle-decoration--small {
+    top: 1600px;
+    left: -30px;
   }
 }
 
@@ -263,31 +386,23 @@ p {
   }
 
   .circle-decoration--jenn {
-    position: absolute;
     top: 400px;
     left: 50px;
-    z-index: -1;
   }
 
   .circle-decoration--sam {
-    position: absolute;
     top: 0;
     left: 500px;
-    z-index: -1;
   }
 
   .heart--jenn {
-    position: absolute;
     top: 340px;
     left: 260px;
-    z-index: -1;
   }
 
   .heart--sam {
-    position: absolute;
     top: 125px;
     left: 500px;
-    z-index: -1;
   }
 
   .jennmetsam {
@@ -298,13 +413,20 @@ p {
     padding-left: 1em;
   }
 
-  .gifts {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+  .gift,
+  .charity img {
+    padding: 0.2em;
+    max-width: 225px;
   }
 
-  .gift {
-    max-width: 200px;
+  .circle-decoration--charity {
+    top: 500px;
+    left: 550px;
+  }
+
+  .circle-decoration--charity.circle-decoration--small {
+    top: 1780px;
+    left: 50px;
   }
 }
 
@@ -335,9 +457,29 @@ p {
     left: 0;
   }
 
-  .circle-decoration--large {
-    &.circle-decoration--sam {
-      left: 700px;
+  .testimonials {
+    .circle-decoration--large {
+      &.circle-decoration--sam {
+        top: 300px;
+        left: 700px;
+      }
     }
+  }
+
+  .circle-decoration--large {
+    &.circle-decoration--charity {
+      top: 500px;
+      left: 800px;
+    }
+  }
+
+  .circle-decoration--charity.circle-decoration--small {
+    top: 1300px;
+    left: 100px;
+  }
+
+  .gifts,
+  .charities {
+    grid-template-columns: 25% 25% 25% 25%;
   }
 }

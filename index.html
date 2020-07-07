@@ -7,11 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>
-      <nav>
-
-      </nav>
-    </header>
     <div class="content">
       <section class="what">
         <img src="img/pink-sparkle.gif" alt="" class="sparkle-img">
@@ -66,51 +61,39 @@
       <section class="why">
         <div class="circle-decoration circle-decoration--large circle-decoration--why"></div>
         <h2 class="why-title">Gifts?</h2>
-        <p>We don't need no stinkin' gifts.</p>
-        <p>People have been asking us stuff. We don't really need anything. But we made this website. And we love food.</p>
-        <div id="paypal-button-container"></div>
+        <p>We don't need no stinkin' gifts. But many of you have asked if we're registered somewhere. We're unfortunately not, and we don't really need anything. But we made this website. And we love food.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_donations" />
+          <input type="hidden" name="business" value="844JY3F5E2FG2" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <div>
+            <p>If you'd like, you can send us as gift through PayPal by clicking the button. Or our email address is flotsamandjensam@gmail.com.</p>
+            <input type="image" src="img/gift.png" border="0" name="submit" alt="Donate with PayPal button, Gift icon by Oksana Latysheva from the Noun Project" class="gift-button" />
+          </div>
+          <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          </form>                    
         <p>Here are some things we might purchase with your gifts:</p>
         <div class="gifts">
           <img src="img/ac.png" alt="" class="gift">
-          <img src="img/pan.png" alt="" class="gift">
+          <img src="img/omakase.png" alt="" class="gift">
           <img src="img/pots.png" alt="" class="gift">
           <img src="img/house.png" alt="" class="gift">
         </div>
         <h3>Charity</h3>
-        <p>Alternatively, we'd love for y'all to donate to charities in our name:</p>
-        <a href="https://lwvsf.org/donate" target="_blank" rel="nolooper"><img src="img/LWVSF.png" alt="" class="gift"></a>
-        <a href="https://lacocinasf.org/" target="_blank" rel="nolooper"><img src="img/cocina.png" alt="" class="gift"></a>
-        <a href="http://www.cohsf.org/" target="_blank" rel="nolooper"><img src="img/coh.png" alt="" class="gift"></a>
-        <a href="https://www.blackgirlscode.com/" target="_blank" rel="nolooper"><img src="img/bgc.png" alt="" class="gift"></a>
+        <p>Alternatively, we'd love for y'all to donate to charities in our name. To donate, just click on one of the images below:</p>
+        <div class="charities">
+          <a href="https://lwvsf.org/donate" target="_blank" rel="nolooper" class="charity"><img src="img/LWVSF.png" alt="League of Women Voters SF logo"></a>
+          <a href="https://lacocinasf.org/" target="_blank" rel="nolooper" class="charity"><img src="img/cocina.png" alt="La Cocina SF logo"></a>
+          <a href="http://www.cohsf.org/" target="_blank" rel="nolooper" class="charity"><img src="img/coh.png" alt="Coalition on Homelessness logo"></a>
+          <a href="https://www.blackgirlscode.com/" target="_blank" rel="nolooper" class="charity"><img src="img/bgc.png" alt="Black Girls Code logos"></a>
+        </div>
+        <div class="circle-decoration circle-decoration--large circle-decoration--charity"></div>
+        <div class="circle-decoration circle-decoration--small circle-decoration--charity"></div>
       </section>
       <footer>
-        <p>© Jenn and Sam 2020</p>
+        <h4>© Jenn and Sam 2020</h4>
       </footer>
     </div>
-    <script src="https://www.paypal.com/sdk/js?client-id=AU-3G9ffxMM-2codGhMehmnO_DVFZlrG9e7gOfpV9bjRxro4fkTTM6QeIYrITFqzZojnZPTMMFU9ffkP&currency=USD" data-sdk-integration-source="button-factory"></script>
-    <script>
-      paypal.Buttons({
-        style: {
-          shape: 'rect',
-          color: 'black',
-          layout: 'vertical',
-          label: 'paypal',
-        },
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: {
-                value: '8.88'
-              }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Transaction completed by ' + details.payer.name.given_name + '!');
-          });
-        }
-      }).render('#paypal-button-container');
-    </script>
+
   </body>
 </html>
